@@ -5,7 +5,7 @@ the documentation on the github page, I decided to approach this from the perspe
 of being a lender that is working with a borrower and is writing an integration into the
 API that you have written.
 
-As such, I have tried to distill the data down the data that the your API deals with down into
+As such, I have tried to distill the data that your API uses down into 
 various domain objects that would seem practical for lenders: company, user (employee), loan and then also
 a forgiveness request domain class to represent the external records in your system.
 
