@@ -20,10 +20,10 @@ for this hypothetical lender.
 I have included a postman directory that has a collection and an environment file.
 
 The collection has two main folders:
-- one that corresponds to every endpoint for your SBA PPP API
-- one that corresponds to the endpoints for the back end that I wrote
+- `SBA Loan Forgiveness API` is a collection of all of the endpoints in your API
+- `PPP-Loan-API` is a collection of all of the endpoints that are in the back end app that I wrote
 
 ## PPP APP API
 
-This is the the django project that represents that back end that I wrote for the hypothetical company.
+This is the the django rest framework project that represents that back end that I wrote for the hypothetical lender.
  
