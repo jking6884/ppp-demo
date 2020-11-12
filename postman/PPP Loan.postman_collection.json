@@ -1,0 +1,997 @@
+{
+	"info": {
+		"_postman_id": "21184282-f743-48c2-b1c0-f4b301e90f81",
+		"name": "PPP Loan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SBA Loan Forgiveness API",
+			"item": [
+				{
+					"name": "Document Types",
+					"item": [
+						{
+							"name": "Get Document Types",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{apiKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Vendor-Key",
+										"value": "{{vendorKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_document_types/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_document_types",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Forgiveness Request",
+					"item": [
+						{
+							"name": "Create Forgiveness Request 3508",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"etran_loan\": {\n        \"bank_notional_amount\": 900000.00,\n        \"sba_number\": \"9999114733\",\n        \"loan_number\": \"7777777\",\n        \"entity_name\": \"Abc Inc\",\n        \"ein\": \"997114733\",\n        \"funding_date\": \"2020-07-06\",\n        \"forgive_eidl_amount\": 100.00,\n        \"forgive_eidl_application_number\": 123456789,\n        \"forgive_payroll\": 1000.00,\n        \"forgive_rent\": 1000.00,\n        \"forgive_utilities\": 1000.00,\n        \"forgive_mortgage\": 1000.00,\n        \"address1\": \"5050 Ritter Road – Suite B\",\n        \"address2\": \"Mechanicsburg, PA\",\n        \"dba_name\": \"Abc Inc\",\n        \"phone_number\": \"6102342123\",\n        \"forgive_fte_at_loan_application\": 10,\n        \"demographics\": [\n            {\n                \"name\": \"Jason\",\n                \"position\": \"self-employed individual\",\n                \"veteran_status\": \"1\",\n                \"gender\": \"M\",\n                \"ethnicity\": \"H\",\n                \"races\": [\n                    {\n                        \"race\": \"1\"\n                    }\n                ]\n            }\n        ],\n        \"forgive_line_6_3508_or_line_5_3508ez\": 3999.00,\n        \"forgive_modified_total\": 3999.00,\n        \"forgive_payroll_cost_60_percent_requirement\": 1666.66,\n        \"forgive_amount\": 1666.66,\n        \"forgive_fte_at_forgiveness_application\": 10,\n        \"forgive_schedule_a_line_1\": 1.00,\n        \"forgive_schedule_a_line_2\": 1.00,\n        \"forgive_schedule_a_line_3_checkbox\": true,\n        \"forgive_schedule_a_line_3\": 1.00,\n        \"forgive_schedule_a_line_4\": 1.00,\n        \"forgive_schedule_a_line_5\": 1.00,\n        \"forgive_schedule_a_line_6\": 1.00,\n        \"forgive_schedule_a_line_7\": 1.00,\n        \"forgive_schedule_a_line_8\": 1.00,\n        \"forgive_schedule_a_line_9\": 1.00,\n        \"forgive_schedule_a_line_10\": 6.00,\n        \"forgive_schedule_a_line_10_checkbox\": true,\n        \"forgive_schedule_a_line_11\": 10.00,\n        \"forgive_schedule_a_line_12\": 10.00,\n        \"forgive_schedule_a_line_13\": 1.00,\n        \"forgive_covered_period_from\": \"2020-07-06\",\n        \"forgive_covered_period_to\": \"2020-09-06\",\n        \"forgive_alternate_covered_period_from\": \"2020-07-06\",\n        \"forgive_alternate_covered_period_to\": \"2020-09-06\",\n        \"forgive_2_million\": false,\n        \"forgive_payroll_schedule\": \"Weekly\",\n        \"primary_email\": \"user@example.com\",\n        \"primary_name\": \"Jason\",\n        \"ez_form\": false,\n        \"no_reduction_in_employees\": true,\n        \"no_reduction_in_employees_and_covid_impact\": true,\n        \"forgive_lender_confirmation\": true,\n        \"forgive_lender_decision\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Forgiveness Request 3508 EX",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{apiKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Vendor-Key",
+										"value": "{{vendorKey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"etran_loan\": {\n        \"bank_notional_amount\": 900000.00,\n        \"sba_number\": \"9999114733\",\n        \"loan_number\": \"7777777\",\n        \"entity_name\": \"Abc Inc\",\n        \"ein\": \"997114733\",\n        \"funding_date\": \"2020-07-06\",\n        \"forgive_eidl_amount\": 100.00,\n        \"forgive_eidl_application_number\": 123456789,\n        \"forgive_payroll\": 1000.00,\n        \"forgive_rent\": 1000.00,\n        \"forgive_utilities\": 1000.00,\n        \"forgive_mortgage\": 1000.00,\n        \"address1\": \"5050 Ritter Road – Suite B\",\n        \"address2\": \"Mechanicsburg, PA\",\n        \"dba_name\": \"Abc Inc\",\n        \"phone_number\": \"6102342123\",\n        \"forgive_fte_at_loan_application\": 10,\n        \"demographics\": [\n            {\n                \"name\": \"Jason\",\n                \"position\": \"self-employed individual\",\n                \"veteran_status\": \"1\",\n                \"gender\": \"M\",\n                \"ethnicity\": \"H\",\n                \"races\": [\n                    {\n                        \"race\": \"1\"\n                    }\n                ]\n            }\n        ],\n        \"forgive_line_6_3508_or_line_5_3508ez\": 4000.00,\n        \"forgive_payroll_cost_60_percent_requirement\": 1666.66,\n        \"forgive_amount\": 1666.66,\n        \"forgive_fte_at_forgiveness_application\": 10,\n        \"forgive_covered_period_from\": \"2020-07-06\",\n        \"forgive_covered_period_to\": \"2020-09-06\",\n        \"forgive_alternate_covered_period_from\": \"2020-07-06\",\n        \"forgive_alternate_covered_period_to\": \"2020-09-06\",\n        \"forgive_2_million\": false,\n        \"forgive_payroll_schedule\": \"Weekly\",\n        \"primary_email\": \"user@example.com\",\n        \"primary_name\": \"Jason\",\n        \"ez_form\": true,\n        \"forgive_lender_confirmation\": true,\n        \"forgive_lender_decision\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Forgiveness Request 3508S",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"etran_loan\": {\n        \"bank_notional_amount\": 11777.74,\n        \"sba_number\": \"342890448459835\",\n        \"loan_number\": \"6849385\",\n        \"entity_name\": \"Mock Business\",\n        \"ein\": \"879896166\",\n        \"funding_date\": \"2020-05-04\",\n        \"address1\": \"35 Main Street\",\n        \"address2\": \"-\",\n        \"phone_number\": \"2342342345\",\n        \"forgive_fte_at_loan_application\": 200,\n        \"forgive_amount\": 11777.74,\n        \"forgive_fte_at_forgiveness_application\": 200,\n        \"primary_email\": \"josh.collins@gmail.com\",\n        \"primary_name\": \"Josh Collins\",\n        \"ez_form\": false,\n        \"forgive_lender_confirmation\": true,\n        \"forgive_lender_decision\": 1,\n        \"s_form\": true,\n        \"dba_name\": \"Axioma\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Forgiveness Request",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/{{forgivenessRequestSlug}}/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										"{{forgivenessRequestSlug}}",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Upload Forgiveness Documents",
+					"item": [
+						{
+							"name": "Upload Forgiveness Documents",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Payroll.pdf",
+											"type": "text"
+										},
+										{
+											"key": "document_type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "etran_loan",
+											"value": "df481fbb-c41f-46f3-b96f-94374d747a8d",
+											"type": "text"
+										},
+										{
+											"key": "document",
+											"type": "file",
+											"src": []
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_documents/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_documents",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Forgiveness Requests Details",
+					"item": [
+						{
+							"name": "Get Forgiveness Details for All Requests",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{apiKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Vendor-Key",
+										"value": "{{vendorKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgiveness Details For Request By SBA Number",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/{{sbaNumber}}/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										"{{sbaNumber}}",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgiveness Details For Request By UUID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_requests/{{forgivenessRequestSlug}}/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_requests",
+										"{{forgivenessRequestSlug}}",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "54fd274e-abfc-44de-9edc-c1dc19724cfa",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d2277db0-9d82-49ff-a23b-cfcb2498da91",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Forgiveness Messages",
+					"item": [
+						{
+							"name": "Get Forgiveness Messages",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_messages/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_messages",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgiveness Messages By UUID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_messages/{{forgivenessRequestSlug}}/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_messages",
+										"{{forgivenessRequestSlug}}",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgiveness Messages By SBA Number",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_messages/?sba_number={{sbaNumber}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_messages",
+										""
+									],
+									"query": [
+										{
+											"key": "sba_number",
+											"value": "{{sbaNumber}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Reply to SBA Message",
+					"item": [
+						{
+							"name": "Upload Forgiveness Documents",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "document_type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "document_name",
+											"value": "Payroll.pdf",
+											"type": "text"
+										},
+										{
+											"key": "etran_loan",
+											"value": "df481fbb-c41f-46f3-b96f-94374d747a8d",
+											"type": "text"
+										},
+										{
+											"key": "document",
+											"type": "file",
+											"src": []
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_forgiveness_message_reply/{{forgivenessRequestSlug}}/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_forgiveness_message_reply",
+										"{{forgivenessRequestSlug}}",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Validate/Lookup Disbursed PPP Loan",
+					"item": [
+						{
+							"name": "Get Loan Validations",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_validations/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_validations",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loan Validations For SBA Number",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{apiKey}}"
+									},
+									{
+										"key": "Vendor-Key",
+										"type": "text",
+										"value": "{{vendorKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/ppp_loan_validations/?sba_number={{sbaNumber}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ppp_loan_validations",
+										""
+									],
+									"query": [
+										{
+											"key": "sba_number",
+											"value": "{{sbaNumber}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PPP-Loan-API",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get Users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"rick.cabrera@gmail.com\",\n    \"first_name\": \"Rick\",\n    \"last_name\": \"Cabrera\",\n    \"email\": \"rick.cabrera@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Companies",
+					"item": [
+						{
+							"name": "Get Companies",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/companies/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"companies",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Company",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address_one\": \"35 Main Street\",\n    \"address_two\": \"\",\n    \"city\": \"Atlanta\",\n    \"state\": \"GA\",\n    \"zip\": \"30350\",\n    \"phone\": \"2342342345\",\n    \"num_of_employees\": 89,\n    \"payroll_costs\": 30000.00,\n    \"business_mortgage_interest_payments\": 3600,\n    \"business_rent_or_lease_payments\": 5000,\n    \"business_utility_payments\": 2400,\n    \"sba_number\": 605770005939285,\n    \"ein\": 685940382,\n    \"dba\": \"Quop Nam\",\n    \"entity_name\": \"Quop Nam, LLC\",\n    \"primary_contact\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/companies/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"companies",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fa66cb6c-ae0d-4984-85fc-65adf3d61ae4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b1000a8e-4a12-4e65-918f-ca55f40d0064",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Loans",
+					"item": [
+						{
+							"name": "Get Loans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/loans/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"loans",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Loan",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": 10,\n    \"company\": 10,\n    \"loan_num\": 3838393,\n    \"funding_date\": \"2020-04-11\",\n    \"loan_amount\": 78815.43\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/loans/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"loans",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Forgiveness Requests",
+					"item": [
+						{
+							"name": "Create Forgiveness Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"loan\": \"2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/forgiveness-requests/create_request/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"forgiveness-requests",
+										"create_request",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Loan Documents",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "414_understanding_crashes_and_crash_logs.pdf",
+											"type": "text"
+										},
+										{
+											"key": "document_type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "loan",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "document",
+											"type": "file",
+											"src": "/Users/johnking/Downloads/414_understanding_crashes_and_crash_logs.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/forgiveness-requests/upload_loan_document/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"forgiveness-requests",
+										"upload_loan_document",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lookup and Validate Forgiveness Request",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{pppLoanApiToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/forgiveness-requests/lookup_and_validate_forgiveness_request/?sba_number={{sbaNumber}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"forgiveness-requests",
+										"lookup_and_validate_forgiveness_request",
+										""
+									],
+									"query": [
+										{
+											"key": "sba_number",
+											"value": "{{sbaNumber}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
