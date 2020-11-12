@@ -11,3 +11,19 @@ the forgiveness requests.
 
 I also took the approach of setting this up as a RESTful service that would serve as the back end
 for this hypothetical company.
+
+# In this project
+
+
+## Postman
+
+I have included a postman directory that has a collection and an environment file.
+
+The collection has two main folders:
+- one that corresponds to every endpoint for your SBA PPP API
+- one that corresponds to the endpoints for the back end that I wrote
+
+## PPP APP API
+
+This is the the django project that represents that back end that I wrote for the hypothetical company.
+ 
