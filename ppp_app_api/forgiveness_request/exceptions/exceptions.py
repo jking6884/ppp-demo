@@ -1,0 +1,2 @@
+class ForgivenessSdkBadRequest(Exception):
+    pass
